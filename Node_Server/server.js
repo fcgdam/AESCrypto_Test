@@ -76,6 +76,6 @@ app.use('/', router);
 app.listen( SERVERPORT );
 
 var datenow = new Date();
-console.log("=========== MPGW UI - REST Api Server =============================");
+console.log("=========== ESP8266 - REST Api Server =============================");
 console.log("Server started at " + datenow );
 console.log("Api endpoint available at server port: " + SERVERPORT );
