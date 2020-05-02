@@ -157,8 +157,8 @@ void decryptData(String b64data, String IV_base64) {
 */
     hextobyte( (char *)iv_decoded, 32, (unsigned char *)p_iv );
 
-    Serial.println("IV decoded: ");
-    aes.printArray( (byte *)iv_decoded, 16 );
+//    Serial.println("IV decoded: ");
+//    aes.printArray( (byte *)iv_decoded, 16 );
     
     // Decrypt data
     aes.do_aes_decrypt((byte *)data_decoded, encrypted_length, out, key, 128, (byte *)p_iv);
@@ -174,7 +174,7 @@ void decryptData(String b64data, String IV_base64) {
 // Send sample data
 void    sendData() {
     String switchOnCooler = "true";
-    encryptData("{\"switchOnCooler\": \""+switchOnCooler+"\"}");
+    encryptData("{\"testdata\": \""+switchOnCooler+"\"}");
 }
 
 // Connects to WIFI
@@ -222,7 +222,7 @@ void setup() {
     // Connect to WIFI.
     WIFI_Connect();
         
-    //timer.setInterval( 10000 , sendData );         // Sends data every 10s    
+    timer.setInterval( 10000 , sendData );         // Sends data every 10s    
 }
 
 void loop() { 
