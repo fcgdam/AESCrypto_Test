@@ -1,0 +1,19 @@
+{
+  "name": "node_client",
+  "version": "1.0.0",
+  "description": "ESP8266 AES128 client to send data",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ESP8266",
+    "AES128"
+  ],
+  "author": "PrimalCortex",
+  "license": "ISC",
+  "dependencies": {
+    "crypto-js": "^4.0.0",
+    "request": "^2.88.2"
+  }
+}
